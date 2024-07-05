@@ -38,6 +38,15 @@ void agregarContacto(contactoEmail contacto[], int &n){
 	cout<<"Ingrese la nacionalidad: ";
 	cin.getline(contacto[n].nacionalidad,15);
 }
+void eliminarContacto(contactoEmail *contacto, int &n){
+	int indice;
+	cout<<"Ingrese la posicion del contacto que desea eliminar: ";
+	cin>>indice;
+	for(int i=indice-1;i<n;i++){
+		contacto[i]=contacto[i+1];
+	}
+	n--;
+}
 
 int main(){
 	contactoEmail conE[30];
@@ -63,6 +72,12 @@ int main(){
 					agregarContacto(conE,n);
 				}
 				break;
+			case 2:
+				system("cls");
+				eliminarContacto(conE,n);
+			
+				
+				system("pause");
 			case 5:
 				cout<<"\nFIN . . .\n";
 				break;
