@@ -47,7 +47,17 @@ void eliminarContacto(contactoEmail *contacto, int &n){
 	}
 	n--;
 }
-
+void mostrarLista(contactoEmail *contacto, int n){
+	cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
+	for(int i=0;i<=n;i++){
+		cout<<contacto[i].nombreCompleto<<"\t\t";
+		cout<<contacto[i].sexo<<"\t\t";
+		cout<<contacto[i].edad<<"\t\t";
+		cout<<contacto[i].telefono<<"\t\t";
+		cout<<contacto[i].email<<"\t\t";
+		cout<<contacto[i].nacionalidad<<"\t\t\n";
+	}
+}
 int main(){
 	contactoEmail conE[30];
 	int n=-1;
@@ -75,9 +85,15 @@ int main(){
 			case 2:
 				system("cls");
 				eliminarContacto(conE,n);
-			
-				
+				cout<<"La lista seria esta: \n";
+				mostrarLista(conE,n);
 				system("pause");
+				break;
+			case 3:
+				mostrarLista(conE,n);
+				cout<<endl;
+				system("pause");
+				break;
 			case 5:
 				cout<<"\nFIN . . .\n";
 				break;
