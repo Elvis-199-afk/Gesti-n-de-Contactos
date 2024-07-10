@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<iomanip>
 using namespace std;
 
 struct contactoEmail {
@@ -48,14 +48,14 @@ void eliminarContacto(contactoEmail *contacto, int &n){
 	n--;
 }
 void mostrarLista(contactoEmail *contacto, int n){
-	cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
+	cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(20)<<"NACIONALIDAD"<<endl<<endl;
 	for(int i=0;i<=n;i++){
-		cout<<contacto[i].nombreCompleto<<"\t\t";
-		cout<<contacto[i].sexo<<"\t\t";
-		cout<<contacto[i].edad<<"\t\t";
-		cout<<contacto[i].telefono<<"\t\t";
-		cout<<contacto[i].email<<"\t\t";
-		cout<<contacto[i].nacionalidad<<"\t\t\n";
+		cout<<setw(50)<<contacto[i].nombreCompleto;
+		cout<<setw(10)<<contacto[i].sexo;
+		cout<<setw(10)<<contacto[i].edad;
+		cout<<setw(30)<<contacto[i].telefono;
+		cout<<setw(50)<<contacto[i].email;
+		cout<<setw(20)<<contacto[i].nacionalidad<<endl;
 	}
 }
 int tamArreglo(contactoEmail contacto[], int x){
@@ -87,14 +87,14 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 	
 	cout<<"Gmail: "<<endl;
 	if(ng>-1){
-		cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
+		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(20)<<"NACIONALIDAD"<<endl<<endl;
 		for(int i=0;i<=ng;i++){
-			cout<<arr[gmail[i]].nombreCompleto<<"\t\t";
-			cout<<arr[gmail[i]].sexo<<"\t\t";
-			cout<<arr[gmail[i]].edad<<"\t\t";
-			cout<<arr[gmail[i]].telefono<<"\t\t";
-			cout<<arr[gmail[i]].email<<"\t\t";
-			cout<<arr[gmail[i]].nacionalidad<<"\t\t\n";
+			cout<<setw(50)<<arr[gmail[i]].nombreCompleto;
+			cout<<setw(10)<<arr[gmail[i]].sexo;
+			cout<<setw(10)<<arr[gmail[i]].edad;
+			cout<<setw(30)<<arr[gmail[i]].telefono;
+			cout<<setw(50)<<arr[gmail[i]].email;
+			cout<<setw(20)<<arr[gmail[i]].nacionalidad<<endl;
 		}
 		cout<<endl;
 	}else{
@@ -103,14 +103,14 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 	
 	cout<<"Outlook: "<<endl;
 	if(nk>-1){
-		cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
+		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(20)<<"NACIONALIDAD"<<endl<<endl;
 		for(int i=0;i<=nk;i++){
-			cout<<arr[outlook[i]].nombreCompleto<<"\t\t";
-			cout<<arr[outlook[i]].sexo<<"\t\t";
-			cout<<arr[outlook[i]].edad<<"\t\t";
-			cout<<arr[outlook[i]].telefono<<"\t\t";
-			cout<<arr[outlook[i]].email<<"\t\t";
-			cout<<arr[outlook[i]].nacionalidad<<"\t\t\n";
+			cout<<setw(50)<<arr[outlook[i]].nombreCompleto;
+			cout<<setw(10)<<arr[outlook[i]].sexo;
+			cout<<setw(10)<<arr[outlook[i]].edad;
+			cout<<setw(30)<<arr[outlook[i]].telefono;
+			cout<<setw(50)<<arr[outlook[i]].email;
+			cout<<setw(20)<<arr[outlook[i]].nacionalidad<<endl;
 		}
 		cout<<endl;
 	}else{
@@ -119,14 +119,14 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 
 	cout<<"Yahoo: "<<endl;
 	if(ny>-1){
-		cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
-		for(int i=0;i<=ny;i++){
-			cout<<arr[yahoo[i]].nombreCompleto<<"\t\t";
-			cout<<arr[yahoo[i]].sexo<<"\t\t";
-			cout<<arr[yahoo[i]].edad<<"\t\t";
-			cout<<arr[yahoo[i]].telefono<<"\t\t";
-			cout<<arr[yahoo[i]].email<<"\t\t";
-			cout<<arr[yahoo[i]].nacionalidad<<"\t\t\n";
+		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(30)<<"NACIONALIDAD"<<endl<<endl;
+		for(int i=0;i<=ng;i++){
+			cout<<setw(50)<<arr[yahoo[i]].nombreCompleto;
+			cout<<setw(10)<<arr[yahoo[i]].sexo;
+			cout<<setw(10)<<arr[yahoo[i]].edad;
+			cout<<setw(30)<<arr[yahoo[i]].telefono;
+			cout<<setw(50)<<arr[yahoo[i]].email;
+			cout<<setw(30)<<arr[yahoo[i]].nacionalidad<<endl;
 		}
 		cout<<endl;
 	}else{
@@ -135,14 +135,14 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 	
 	cout<<"Otros: "<<endl;
 	if(otros>-1){
-		cout<<"NOMBRE\t\t"<<"SEXO\t\t"<<"EDAD\t\t"<<"TELEFONO\t\t"<<"EMAIL\t\t"<<"NACIONALIDAD\t\t\n\n";
-		for(int i=0;i<=otros;i++){
-			cout<<arr[etc[i]].nombreCompleto<<"\t\t";
-			cout<<arr[etc[i]].sexo<<"\t\t";
-			cout<<arr[etc[i]].edad<<"\t\t";
-			cout<<arr[etc[i]].telefono<<"\t\t";
-			cout<<arr[etc[i]].email<<"\t\t";
-			cout<<arr[etc[i]].nacionalidad<<"\t\t\n";
+		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(30)<<"NACIONALIDAD"<<endl<<endl;
+		for(int i=0;i<=ng;i++){
+			cout<<setw(50)<<arr[etc[i]].nombreCompleto;
+			cout<<setw(10)<<arr[etc[i]].sexo;
+			cout<<setw(10)<<arr[etc[i]].edad;
+			cout<<setw(30)<<arr[etc[i]].telefono;
+			cout<<setw(50)<<arr[etc[i]].email;
+			cout<<setw(30)<<arr[etc[i]].nacionalidad<<endl;
 		}
 		cout<<endl;
 	}else{
@@ -159,8 +159,8 @@ int main(){
 		cout<<"=== GESTION DE CONTACTOS ===\n\n";
 		cout<<" 1. Agregar contacto\n";
 		cout<<" 2. Eliminar contacto\n";
-		cout<<" 3. Mostrar lista general de contactos registrados hasta el momento\n";
-		cout<<" 4. Mostrar listado de contactos ya existentes, ordenados por servidor de correo de las cuentas (gmail.com, outlook.com, yahoo.com, etc.)\n";
+		cout<<" 3. Mostrar lista general de contactos registrados hasta el momento (preferiblemente ponga pantalla completa)\n";
+		cout<<" 4. Mostrar listado de contactos ya existentes, ordenados por servidor de correo de las cuentas (gmail.com, outlook.com, yahoo.com, etc.) (preferiblemente ponga pantalla completa)\n";
 		cout<<" 5. Salir del programa\n\n";
 		cout<<"== SELECCIONA UNA DE LAS OPCIONES ==\n";
 		cin>>op;
