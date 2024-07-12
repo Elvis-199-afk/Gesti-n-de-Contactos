@@ -120,7 +120,7 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 	cout<<"Yahoo: "<<endl;
 	if(ny>-1){
 		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(30)<<"NACIONALIDAD"<<endl<<endl;
-		for(int i=0;i<=ng;i++){
+		for(int i=0;i<=ny;i++){
 			cout<<setw(50)<<arr[yahoo[i]].nombreCompleto;
 			cout<<setw(10)<<arr[yahoo[i]].sexo;
 			cout<<setw(10)<<arr[yahoo[i]].edad;
@@ -136,7 +136,7 @@ void mostrarListaOrdenada(contactoEmail arr[], int n){
 	cout<<"Otros: "<<endl;
 	if(otros>-1){
 		cout<<left<<setw(50)<<"NOMBRE"<<setw(10)<<"SEXO"<<setw(10)<<"EDAD"<<setw(30)<<"TELEFONO"<<setw(50)<<"EMAIL"<<setw(30)<<"NACIONALIDAD"<<endl<<endl;
-		for(int i=0;i<=ng;i++){
+		for(int i=0;i<=otros;i++){
 			cout<<setw(50)<<arr[etc[i]].nombreCompleto;
 			cout<<setw(10)<<arr[etc[i]].sexo;
 			cout<<setw(10)<<arr[etc[i]].edad;
